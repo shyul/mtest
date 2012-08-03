@@ -140,55 +140,25 @@ U32 j, k, a;
 				}
 				
 				Delay_ms(50);
-// 				for(j=0; j<=0x8000; j = j+0x200){
-// 					GRID_PWM(0)->PWM_DTYC = j;
-
-// 					GRID_PWM(0)->PWM_DTYC = j;
-
-// 					GRID_PWM(i)->PWM_DTYC = j;
-
-// 					GRID_PWM(1)->PWM_DTYC = j;
-
-// 					GRID_PWM(2)->PWM_DTYC = j;				
-// 					Delay_ms(2);
-// 				}
-// 				
-// 				for(j=0; j<=0x8000; j = j+0x200){
-// 					GRID_PWM(0)->PWM_DTYC = (0x8000 - j);
-
-// 					GRID_PWM(0)->PWM_DTYC = (0x8000 - j);
-
-// 					GRID_PWM(i)->PWM_DTYC = 0x8000 - j;
-
-// 					GRID_PWM(1)->PWM_DTYC = (0x8000 - j);
-
-// 					GRID_PWM(2)->PWM_DTYC = (0x8000 - j);
-// 					Delay_ms(2);
-// 				}
 			}
-
 			
-// 			GRID_PIO26_SLOT_A->PIO_DOE = (0xFFFFFFFF);
-// 			GRID_PIO26_SLOT_B->PIO_DOE = (0xFFFFFFFF);
-// 			
-// 			
-// 			for(i=0; i<4; i++)
-// 			{
-// 				GRID_PIO26_SLOT_A->PIO_DOUT[i] = (0x0);
-// 				Delay_ms(200);
-// 				GRID_PIO26_SLOT_A->PIO_DOUT[i] = (0xFF);
-// 			}
+ 			GRID_PIO26_SLOT_A->PIO_DOE = (0xFFFFFFFF);
+ 			GRID_PIO26_SLOT_B->PIO_DOE = (0xFFFFFFFF);
 
-// 			for(i=0; i<26; i++)
-// 			{
-// 				GRID_PIO26_SLOT_A->PIO_IO[i] = 0;
-// 				Delay_ms(50);
-// 				GRID_PIO26_SLOT_A->PIO_IO[i] = 1;
-// 			}
-			
+ 			for(i=0; i<4; i++)
+ 			{
+ 				GRID_PIO26_SLOT_A->PIO_DOUT[i] = (0x0);
+ 				Delay_ms(200);
+ 				GRID_PIO26_SLOT_A->PIO_DOUT[i] = (0xFF);
+ 			}
 
+ 			for(i=0; i<26; i++)
+ 			{
+ 				GRID_PIO26_SLOT_A->PIO_IO[i] = 0;
+ 				Delay_ms(50);
+ 				GRID_PIO26_SLOT_A->PIO_IO[i] = 1;
+ 			}
 		}
-
 	}
 }
 
